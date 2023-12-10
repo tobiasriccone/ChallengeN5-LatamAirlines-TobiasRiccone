@@ -1,0 +1,20 @@
+{
+  "pasajeros": {
+    "cantidad": 2,
+    "tipoPasajeroExtra": "niño"
+  },
+  "cabina": "Premium Economy",
+  "origen": "Medellín",
+  "destino": "Bogotá",
+  "fechaIda": {
+    "anio": 2024,
+    "mes": "enero",
+    "dia": 1
+  },
+  "fechaVuelta": {
+    "anio": 2024,
+    "mes": "enero",
+    "dia": 31
+  },
+  "pesoEquipaje": 15
+}

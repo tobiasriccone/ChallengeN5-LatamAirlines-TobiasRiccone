@@ -1,0 +1,9 @@
+rootProject.name = 'ChallengeN5-TobiasRiccone'
+
+asignarPropiedad("appUrl", "https://www.latamairlines.com/co/es")
+asignarPropiedad("elementWait", "20")
+asignarPropiedad("pageLoadWait", "40")
+
+static def asignarPropiedad(String key, String value) {
+    System.setProperty(key, value)
+}

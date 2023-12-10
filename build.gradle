@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version "2.11.2"
+}
+
+group 'tobias.riccone'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Selenium 4
+    implementation 'org.seleniumhq.selenium:selenium-java:4.10.0'
+    // Cucumber 7 con JUnit 4
+    testImplementation 'io.cucumber:cucumber-java:7.11.0'
+    testImplementation 'io.cucumber:cucumber-junit:7.11.0'
+    // Allure Cucumber 7 Plugin
+    implementation 'io.qameta.allure:allure-cucumber7-jvm:2.21.0'
+    // Allure Cucumber Adaptor
+    implementation 'ru.yandex.qatools.allure:allure-cucumber-jvm-adaptor:1.6.3'
+    // PDF to Text
+    implementation 'org.apache.pdfbox:pdfbox:2.0.27'
+    // WebDriver Manager
+    implementation 'io.github.bonigarcia:webdrivermanager:5.6.2'
+    // JsonNode
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+}
+
+allure {
+    version '2.20.1'
+    useCucumberJVM { version = '2.20.1' }
+}
+
+tasks.register('CucumberTest', Test) {
+    systemProperties System.getProperties()
+    systemProperty "cucumber.publish.quiet", "true"
+    systemProperty "cucumber.filter.tags", System.getProperty("tags")
+    include "**/**/**.class"
+}
