@@ -5,7 +5,7 @@ Proyecto de automatización de pruebas UI.
 - Java 11 +
 - Chrome
 ## Ejecución
-Una vez clonado el proyecto, pararse en el proyecto y ejecutar en la terminal el comando "./gradlew clean CucumberTest", luego ejecutar "./gradlew allureDownload allureServe" para visualizar el reporte.
+Una vez clonado el proyecto, pararse en el proyecto y ejecutar en la terminal el comando "./gradlew clean CucumberTest", luego ejecutar "./gradlew downloadAllure allureServe" para visualizar el reporte.
 ## Características del proyecto
 - Desarrollado con Java y Gradle como gestor.
 - Utiliza Cucumber para definir los casos de prueba.
