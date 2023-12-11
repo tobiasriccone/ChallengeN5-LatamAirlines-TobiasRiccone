@@ -8,6 +8,8 @@ Proyecto de automatización de pruebas UI.
 Una vez clonado el proyecto, posicionerse en el y ejecutar en la terminal el comando ".\gradlew clean CucumberTest", luego ejecutar ".\gradlew downloadAllure allureServe" para visualizar el reporte.
 
 **A modo de simplificar la ejecución existen los archivos "Ejecutar.bat" y "Reporte.bat". Al hacer doble click en el "Ejecutar.bat" correra los casos de prueba, luego para visualizar el allure ejecutar el "Reporte.bat".**
+
+La primera vez que se ejecute puede demorar unos minutos debido a que descargara en el proyecto las dependencias necesarias.
 ## Características del proyecto
 - Desarrollado con Java y Gradle.
 - Utiliza Cucumber para definir los casos de prueba.
