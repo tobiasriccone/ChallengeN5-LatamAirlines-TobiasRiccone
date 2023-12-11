@@ -37,7 +37,8 @@ allure {
 
 tasks.register('CucumberTest', Test) {
     systemProperties System.getProperties()
+    def tag = (systemProperties.get('tags') == null) ? "not @skip" : systemProperties.get('tags') + " and not @skip"
+    systemProperty "cucumber.filter.tags", tag
     systemProperty "cucumber.publish.quiet", "true"
-    systemProperty "cucumber.filter.tags", System.getProperty("tags")
     include "**/**/**.class"
 }
